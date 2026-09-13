@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="マネープログラムの考え方、学べる内容、普段の生活ですぐに使えるお金の豆知識をやさしく紹介します。">
+  <title>マネープログラム・コラム｜Money & Life Compass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#334155;--deep:#23556f;--aqua:#54cfc5;--sky:#8ed8ff;--lemon:#ffe88a;--coral:#ff8f86;--mint:#eafbf6;--paper:#fffefb;--muted:#64748b;--line:#dcefea;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans JP","Yu Gothic",sans-serif;line-height:1.9;font-size:16px}a{color:inherit}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.topbar-inner{min-height:68px;display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font-weight:800;color:var(--deep);text-decoration:none}.back{font-weight:700;color:#278f89;text-decoration:none;font-size:.92rem}
+    .hero{padding:78px 0 70px;background:radial-gradient(circle at 13% 18%,rgba(255,232,138,.58),transparent 28%),radial-gradient(circle at 88% 20%,rgba(142,216,255,.48),transparent 30%),linear-gradient(145deg,#fff,#effcf8 72%,#fff9dd);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.eyebrow,.kicker{color:#269c95;font-weight:800;letter-spacing:.09em;font-size:.84rem}.hero h1{font-size:clamp(2.5rem,5vw,4.6rem);line-height:1.28;margin:.22em 0;color:var(--deep);font-weight:800}.hero p{font-size:1.08rem;color:#526777}.hero img{width:100%;height:390px;object-fit:cover;border-radius:42px 42px 110px 42px;border:5px solid rgba(255,255,255,.9);box-shadow:0 24px 65px rgba(64,146,153,.15)}
+    .quick-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}.quick-nav a{background:#fff;border:2px solid #dff2ed;border-radius:18px;padding:14px 16px;text-decoration:none;font-weight:800;color:var(--deep);box-shadow:0 8px 20px rgba(53,125,132,.07)}
+    section{padding:88px 0}.soft{background:linear-gradient(135deg,#fff9dc,#edfdf8 55%,#eef8ff)}.title{font-size:clamp(2rem,3.7vw,3.05rem);line-height:1.4;margin:.25em 0;color:var(--deep);font-weight:800}.intro{max-width:780px;color:var(--muted);margin:0}.lead-card{margin-top:36px;background:#fff;border:2px solid #e0f2ed;border-radius:30px;padding:38px;box-shadow:0 18px 48px rgba(53,125,132,.1)}.lead-card strong{color:var(--deep)}
+    .learning-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}.learn{background:#fff;border:2px solid #e2f2ee;border-radius:24px;padding:26px;box-shadow:0 12px 32px rgba(53,125,132,.07)}.learn b{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#e3faf5;color:#239b94;margin-bottom:13px}.learn h3{margin:.1em 0;color:var(--deep)}.learn p{margin:.35em 0 0;color:var(--muted)}
+    .articles-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.tag{display:inline-block;border-radius:999px;background:#fff0bd;color:#745f19;padding:5px 12px;font-size:.8rem;font-weight:800}.articles{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.article{background:#fff;border:2px solid #e2f2ee;border-radius:26px;padding:28px;box-shadow:0 14px 36px rgba(53,125,132,.08)}.article:nth-child(3n+1){border-top:7px solid var(--sky)}.article:nth-child(3n+2){border-top:7px solid var(--lemon)}.article:nth-child(3n){border-top:7px solid var(--coral)}.article-num{font-size:.8rem;color:#269c95;font-weight:800;letter-spacing:.08em}.article h3{font-size:1.3rem;line-height:1.55;color:var(--deep);margin:.35em 0}.article p{color:var(--muted);margin:.55em 0}.tip{margin-top:16px;padding:14px 16px;border-radius:15px;background:#f0fbf8;color:#476977}.tip strong{color:#268e88}
+    .closing{max-width:860px;margin:auto;text-align:center;background:#fff;border:2px solid #dff2ed;border-radius:32px;padding:46px;box-shadow:0 20px 55px rgba(53,125,132,.1)}.cta{border:0;border-radius:999px;padding:16px 25px;background:linear-gradient(135deg,var(--coral),#ffb06d);color:#fff;font-weight:800;display:inline-flex;text-decoration:none;box-shadow:0 10px 26px rgba(255,143,134,.28);margin-top:18px}.note{font-size:.84rem;color:var(--muted);margin-top:20px}footer{padding:34px 0;background:#f1fbf8;color:#657987;font-size:.84rem;border-top:1px solid var(--line)}
+    @media(max-width:760px){.wrap{width:min(100% - 28px,1080px)}.hero{padding:52px 0}.hero-grid{grid-template-columns:1fr}.hero img{height:270px;border-radius:28px 28px 72px 28px}.quick-nav,.learning-grid,.articles{grid-template-columns:1fr}.quick-nav{gap:9px}.articles-head{display:block}section{padding:66px 0}.lead-card,.closing{padding:27px 21px}.article{padding:24px}.topbar-inner{min-height:62px}.brand{font-size:.9rem}}
+  </style>
+  <style>
+    :root{--ink:#3d4650;--deep:#172d3b;--aqua:#51bfc7;--sky:#77cbd5;--lemon:#dfbd55;--coral:#df8068;--mint:#edf8f3;--paper:#fffaf4;--muted:#6d7479;--line:#e8dfd5}
+    body{background:var(--paper)}
+    .topbar{background:rgba(255,250,244,.94);border-color:#e8ded3}.brand{color:var(--deep)}.back{color:#398e94}
+    .hero{background:linear-gradient(90deg,rgba(255,250,244,.97) 0%,rgba(255,250,244,.88) 52%,rgba(255,250,244,.38) 100%),url("../hbmp-brand-visual.jpg") center/cover no-repeat}
+    .hero img{border-radius:18px 110px 18px 110px;border-color:rgba(255,250,244,.96);box-shadow:0 24px 65px rgba(69,92,94,.16)}
+    .eyebrow,.kicker{color:#398e94}
+    .quick-nav a{background:rgba(255,253,249,.94);border-color:#e9ded3;border-radius:14px 30px 14px 30px;box-shadow:0 8px 20px rgba(73,85,87,.07)}
+    .lead-card{background:#fffdf9;border-color:#e9ded3;border-radius:18px 52px 18px 52px;box-shadow:0 18px 48px rgba(73,85,87,.09)}
+    .soft{background:linear-gradient(rgba(255,250,244,.84),rgba(255,250,244,.92)),url("../hbmp-brand-visual.jpg") center/cover no-repeat}
+    .learn{background:rgba(255,253,249,.94);border-color:#e9ded3;border-radius:16px 38px 16px 38px;box-shadow:0 12px 32px rgba(73,85,87,.07)}
+    .learn b{background:#edf7f3;color:#398e94;border-radius:50%}
+    .article{background:#fffdf9;border-color:#e9ded3;border-radius:16px 42px 16px 42px;box-shadow:0 14px 36px rgba(73,85,87,.08)}
+    .article:nth-child(4n+1){border-top-color:#6ec5cf}.article:nth-child(4n+2){border-top-color:#dfbd55}.article:nth-child(4n+3){border-top-color:#c092b0}.article:nth-child(4n){border-top-color:#d87b64}
+    .article-num{color:#398e94}.tip{background:#f3f7ef;border-left:4px solid #9eb66b}.tip strong{color:#6c873e}
+    .closing{background:#fffdf9;border-color:#e9ded3;border-radius:18px 58px 18px 58px;box-shadow:0 20px 55px rgba(73,85,87,.09)}
+    footer{background:#f5eee6;border-color:#e8ded3}
+    @media(max-width:760px){.hero{background-position:62% center}.hero img{border-radius:16px 72px 16px 72px}.lead-card{border-radius:16px 38px 16px 38px}.learn,.article{border-radius:14px 32px 14px 32px}.closing{border-radius:16px 42px 16px 42px}}
+    .hero-grid{grid-template-columns:1fr;max-width:900px}.hero p{max-width:780px}
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="ページ案内"><div class="wrap topbar-inner"><a class="brand" href="../">Money &amp; Life Compass</a><a class="back" href="../">← お金と暮らしの診断へ</a></div></nav>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">MONEY PROGRAM COLUMN</div>
+        <h1>お金を学ぶことは、<br>人生を選ぶ力を育てること。</h1>
+        <p>難しい知識を覚えるためではなく、大切な人と自分らしい毎日を生きるために。マネープログラムの考え方と、暮らしに役立つ小さな知恵をお届けします。</p>
+        <div class="quick-nav"><a href="#about">➊ マネープログラムとは</a><a href="#learn">➋ 学べる内容</a><a href="#tips">➌ 豆知識10記事</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap">
+        <div class="kicker">➊ ABOUT</div>
+        <h2 class="title">マネープログラムとは</h2>
+        <p class="intro">マネープログラムは、「お金の量」だけを追いかけるのではなく、お金・時間・健康・人間関係・仕事・幸せを一緒に考えながら、望む人生を実現するための習慣を身につける学びです。</p>
+        <div class="lead-card">
+          <p><strong>目指すのは、「お金がないから」と大切なことを諦めない人生。</strong></p>
+          <p>自分の現在地を数字で知り、人生の目的地から逆算して、今できる一歩を決める。そして「稼ぐ・使う・貯める・増やす・守る」を、実生活の中で少しずつ試します。</p>
+          <p>派手な近道を探すのではなく、焦らず、一段ずつ。未来を変えるのは一度の大きな決断より、今日から積み重ねる小さな習慣だと考えます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="learn">
+      <div class="wrap">
+        <div class="kicker">➋ WHAT YOU LEARN</div>
+        <h2 class="title">マネープログラムで学べる内容</h2>
+        <p class="intro">知識で終わらせず、毎日の選択へ変えていくことが大切です。主な学びを、6つのテーマでご紹介します。</p>
+        <div class="learning-grid">
+          <article class="learn"><b>01</b><h3>現在地を知る</h3><p>収入・支出・貯金・投資・借入を整理し、今どこにいるのかを数字で確かめます。</p></article>
+          <article class="learn"><b>02</b><h3>人生から逆算する</h3><p>10年後や人生の終わりにどんな毎日を送りたいかを描き、必要なお金と行動を考えます。</p></article>
+          <article class="learn"><b>03</b><h3>稼ぐ・使う・貯める</h3><p>人に価値を届けて収入を得ること、満足度を下げずにお金を残すことを学びます。</p></article>
+          <article class="learn"><b>04</b><h3>増やす・守る</h3><p>投資・金利・保険・税金・借入の基本を知り、焦らず長期で資産を育てます。</p></article>
+          <article class="learn"><b>05</b><h3>働き方を育てる</h3><p>E・S・B・Iの働き方を理解し、今の仕事を大切にしながら未来の選択肢を広げます。</p></article>
+          <article class="learn"><b>06</b><h3>続く習慣をつくる</h3><p>小さく試し、振り返り、改善する。自分に合う仕組みで、お金との良い関係を育てます。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tips">
+      <div class="wrap">
+        <div class="articles-head"><div><div class="kicker">➌ DAILY MONEY TIPS</div><h2 class="title">暮らしに使える<br>お金の豆知識10記事</h2></div><p class="intro">全部を一度に始めなくて大丈夫。気になった記事から、ひとつだけ試してみましょう。</p></div>
+        <div class="articles">
+          <article class="article" id="tip01"><div class="article-num">MONEY TIP 01</div><h3>貯金は「残ったら」ではなく、先に分ける</h3><p>月末に残った分を貯めようとしても、なかなか残らないもの。収入が入った日に、無理のない金額を別口座へ移すと、意思の強さに頼らず続けやすくなります。</p><div class="tip"><strong>今日の一歩：</strong>まずは収入の1％、または毎月1,000円から自動積立を設定する。</div></article>
+          <article class="article" id="tip02"><div class="article-num">MONEY TIP 02</div><h3>家計簿は、すべてを細かく書かなくていい</h3><p>最初は「毎月必ず払うお金」「生活によって変わるお金」「未来へ残すお金」の3つに分けるだけでも十分です。完璧より、続けて全体をつかむことを大切にしましょう。</p><div class="tip"><strong>今日の一歩：</strong>先月の通帳や明細を見て、固定費を5つ書き出す。</div></article>
+          <article class="article" id="tip03"><div class="article-num">MONEY TIP 03</div><h3>急な出費への備えは、安心を買うお金</h3><p>病気、家電の故障、冠婚葬祭など、予定外の出費は誰にでもあります。生活費とは別に「もしもの貯金」を持つと、焦って借りたり、投資を崩したりする可能性を減らせます。</p><div class="tip"><strong>今日の一歩：</strong>まずは生活費1か月分を目標に、専用口座を決める。</div></article>
+          <article class="article" id="tip04"><div class="article-num">MONEY TIP 04</div><h3>金利は、暮らしを動かす“お金の天気”</h3><p>金利が変わると、住宅ローン・預金・為替・株価などへ影響します。難しい分析は後回しで大丈夫。金利が上がったか下がったかを知るだけでも、お金を自分ごととして見る力が育ちます。</p><div class="tip"><strong>今日の一歩：</strong>日本とアメリカの政策金利を月に1回だけ確認する。</div></article>
+          <article class="article" id="tip05"><div class="article-num">MONEY TIP 05</div><h3>複利を育てるのは、時間より「続ける習慣」</h3><p>長い時間があっても、積み立てなければ資産は育ちません。小さくても続ける行動があり、そこに時間が掛け合わさることで、複利の力が生まれます。</p><div class="tip"><strong>今日の一歩：</strong>10年続けられる金額を決め、積み立てを自動化する。</div></article>
+          <article class="article" id="tip06"><div class="article-num">MONEY TIP 06</div><h3>大きな買い物は「24時間置く」</h3><p>欲しい気持ちが高まっているときは、必要性より感情が先に動きがちです。すぐに必要でない物は一晩置き、「何のために買う？」「何回使う？」と問い直してみましょう。</p><div class="tip"><strong>今日の一歩：</strong>欲しい物をカートへ入れ、購入は翌日に決める。</div></article>
+          <article class="article" id="tip07"><div class="article-num">MONEY TIP 07</div><h3>保険は、不安の大きさではなく損失の大きさで考える</h3><p>すべての心配を保険で覆うと、毎月の負担が大きくなります。起きる可能性と、起きたとき家計では支えきれない金額かを分けて考えると、必要な保障が見えやすくなります。</p><div class="tip"><strong>今日の一歩：</strong>加入中の保険について「何に・いくら備えるか」を1行ずつ書く。</div></article>
+          <article class="article" id="tip08"><div class="article-num">MONEY TIP 08</div><h3>資産形成は、買う前に「出口」を考える</h3><p>投資は買った瞬間がゴールではありません。いつまで持つのか、どんな条件で手放すのか、損失が出たらどうするのか。出口を先に考えると、勢いだけの判断を減らせます。</p><div class="tip"><strong>今日の一歩：</strong>保有している資産ごとに、目的と予定期間を書く。</div></article>
+          <article class="article" id="tip09"><div class="article-num">MONEY TIP 09</div><h3>収入は「時間」と「仕組み」に分けて眺める</h3><p>働いた時間に応じて得る収入は大切な土台です。同時に、商品・チーム・資産など、自分が動いていない時間にも価値を届ける仕組みを少しずつ育てると、将来の選択肢が増えます。</p><div class="tip"><strong>今日の一歩：</strong>自分の経験が誰の問題解決に役立つか、3つ書き出す。</div></article>
+          <article class="article" id="tip10"><div class="article-num">MONEY TIP 10</div><h3>月1回、家族と「夢から話す」</h3><p>家計の話が節約や注意ばかりになると、お金の時間が重くなります。先に「どこへ行きたい？」「どんな時間を増やしたい？」と話すと、お金を整える理由を共有できます。</p><div class="tip"><strong>今日の一歩：</strong>30分だけ、数字より先に家族の願いを聞く時間を予定に入れる。</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft">
+      <div class="wrap"><div class="closing"><div class="kicker">YOUR NEXT STEP</div><h2 class="title">知った今日を、小さな一歩へ。</h2><p>まずは診断で、お金・働き方・時間・幸せの現在地を見つめてみませんか？正解を競うものではありません。これから大切にしたいことを見つけるための時間です。</p><a class="cta" href="../#diagnosis">無料診断を始める →</a><p class="note">回答内容は保存されず、個人情報も収集しません。</p></div></div>
+    </section>
+  </main>
+  <footer><div class="wrap">© Money &amp; Life Compass<br>本ページは一般的な学びを目的とした内容です。投資・税金・法律についての個別の助言ではありません。</div></footer>
+</body>
+</html>

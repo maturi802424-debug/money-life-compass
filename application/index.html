@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="マネープランニング・コーチングのサンプル申込フォームです。実際の送信・保存は行われません。">
+  <title>サンプル申込フォーム｜HappyBalance MoneyProgram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#3d4650;--deep:#172d3b;--aqua:#51bfc7;--coral:#df8068;--paper:#fffaf4;--muted:#6d7479;--line:#e8dfd5}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(135deg,#fff7e8,#edf8f3 54%,#f5eaf0);color:var(--ink);font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.8;font-size:16px}.wrap{width:min(880px,calc(100% - 32px));margin:auto}.top{padding:28px 0 10px}.brand{color:var(--deep);font-weight:800;letter-spacing:.02em}.back{display:inline-flex;margin-top:12px;color:#398e94;text-decoration:none;font-weight:700}.back:hover{text-decoration:underline}.main{padding:34px 0 80px}.center{text-align:center}.kicker{color:#398e94;font-weight:800;letter-spacing:.1em;font-size:.82rem}.title{font-size:clamp(2rem,5vw,3.3rem);line-height:1.35;margin:.25em 0;color:var(--deep);font-weight:800}.intro{max-width:680px;margin:auto;color:var(--muted)}.demo-banner{margin:24px auto 0;padding:16px 20px;border:2px solid #e5c96f;border-radius:16px;background:#fff8da;color:#66551d;font-weight:700}.form{margin:32px auto 0;padding:38px;background:#fff;border:2px solid var(--line);border-radius:28px;box-shadow:0 20px 55px rgba(73,85,87,.1);text-align:left}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.field{display:grid;gap:7px}.full{grid-column:1/-1}.field label,.field legend{font-weight:800;color:var(--deep)}.field input,.field select,.field textarea{width:100%;border:2px solid #e7ded5;border-radius:13px;padding:13px 14px;background:#fffdf9;color:var(--ink);font:inherit}.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid rgba(81,191,199,.2);border-color:var(--aqua)}.field textarea{min-height:130px;resize:vertical}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{display:flex;align-items:center;gap:10px;padding:14px;border:2px solid #e7ded5;border-radius:14px;background:#fffdf9;cursor:pointer}.option:has(input:checked){border-color:var(--aqua);background:#edf8f3}.consent{display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:#526777}.consent input{width:auto;margin-top:7px}.actions{text-align:center;margin-top:26px}.cta{border:0;border-radius:999px;padding:16px 25px;background:linear-gradient(135deg,var(--coral),#ffb06d);color:#fff;font:inherit;font-weight:800;cursor:pointer;box-shadow:0 10px 26px rgba(223,128,104,.25)}.mini{font-size:.86rem;color:var(--muted)}.success{display:none;margin-top:24px;padding:24px;border:2px solid #bfe1d7;border-radius:18px;background:#edf8f3;text-align:center;color:var(--deep)}.success.show{display:block}.success strong{font-size:1.2rem}footer{padding:26px 0;border-top:1px solid var(--line);background:rgba(255,250,244,.72);color:var(--muted);font-size:.84rem}
+    @media(max-width:680px){.grid,.options{grid-template-columns:1fr}.full{grid-column:auto}.form{padding:26px 20px}.main{padding-top:24px}.title br{display:none}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap"><div class="brand">HappyBalance MoneyProgram</div><a class="back" href="../">← 診断ページへ戻る</a></div></header>
+  <main class="main">
+    <div class="wrap center">
+      <div class="kicker">SAMPLE APPLICATION FORM</div>
+      <h1 class="title">申込フォームを<br>体験する</h1>
+      <p class="intro">マネープランニングまたはコーチングを選び、申込みの流れをお試しください。</p>
+      <div class="demo-banner"><strong>本ページは検証用のサンプルです。</strong><br>Happy Balance Money Programは株式会社AWARENESSが提供するプログラムですが、このフォームは同社の公式申込フォームではありません。実際の申込み・送信・保存は行われません。</div>
+      <form class="form" id="demoApplication">
+        <div class="grid">
+          <fieldset class="field full" style="border:0;padding:0;margin:0"><legend>希望するサービス <span aria-hidden="true">*</span></legend><div class="options"><label class="option"><input type="radio" name="service" value="planning" required> マネープランニング</label><label class="option"><input type="radio" name="service" value="coaching" required> コーチング</label></div></fieldset>
+          <div class="field"><label for="appName">お名前（サンプル）</label><input id="appName" name="name" autocomplete="off" placeholder="例：山田 はな"></div>
+          <div class="field"><label for="appEmail">メールアドレス（サンプル）</label><input id="appEmail" name="email" type="email" autocomplete="off" placeholder="例：sample@example.com"></div>
+          <div class="field"><label for="contactMethod">希望する連絡方法</label><select id="contactMethod" name="contact"><option value="">選択してください</option><option>メール</option><option>オンライン面談</option><option>まだ決めていない</option></select></div>
+          <div class="field"><label for="timing">相談したい時期</label><select id="timing" name="timing"><option value="">選択してください</option><option>できるだけ早く</option><option>1か月以内</option><option>時期は未定</option></select></div>
+          <div class="field full"><label for="message">相談したいこと（サンプル）</label><textarea id="message" name="message" placeholder="今気になっていることや、叶えたい暮らしなどをご記入ください"></textarea></div>
+          <label class="consent full"><input type="checkbox" required><span>このフォームがデモであり、入力内容が送信・保存されないことを確認しました。</span></label>
+        </div>
+        <div class="actions"><button class="cta" type="submit">サンプル送信を試す →</button><p class="mini">ボタンを押しても、入力内容は外部へ送られません。</p></div>
+        <div class="success" id="formSuccess" role="status" tabindex="-1"><strong>サンプル受付が完了しました</strong><br>これは動作確認用の表示です。実際の申込み・送信・保存は行われていません。<p><a class="back" href="../">診断ページへ戻る →</a></p></div>
+      </form>
+    </div>
+  </main>
+  <footer><div class="wrap">非公式・検証用サンプル｜HappyBalance MoneyProgram</div></footer>
+  <script>
+    const params=new URLSearchParams(location.search);
+    const selected=params.get('service');
+    if(['planning','coaching'].includes(selected))document.querySelector(`input[name="service"][value="${selected}"]`).checked=true;
+    document.getElementById('demoApplication').addEventListener('submit',event=>{event.preventDefault();const success=document.getElementById('formSuccess');success.classList.add('show');success.focus()});
+  </script>
+</body>
+</html>
