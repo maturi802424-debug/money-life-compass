@@ -1,238 +1,95 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="お金・時間・幸福の5領域から、あなたの現在地と次の一歩がわかる20問の無料診断。">
-  <title>豊かさの現在地診断｜Money & Life Compass</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#334155;--deep:#23556f;--aqua:#63d8cf;--sky:#8ed8ff;--lemon:#ffe88a;--coral:#ff8f86;--mint:#eafbf6;--paper:#fffefb;--muted:#64748b;--line:#dcefea;--white:#fff}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.9;font-size:16px}button{font:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.hero{background:radial-gradient(circle at 16% 16%,rgba(255,232,138,.6),transparent 25%),radial-gradient(circle at 86% 22%,rgba(142,216,255,.48),transparent 27%),linear-gradient(145deg,#ffffff,#effcf8 72%,#fff9dd);color:var(--ink);min-height:92vh;display:grid;align-items:center;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:420px;height:420px;border:2px dashed rgba(99,216,207,.28);border-radius:50%;right:-110px;bottom:-180px;box-shadow:0 0 0 70px rgba(142,216,255,.07),0 0 0 140px rgba(255,232,138,.07)}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:72px;align-items:center;padding:80px 0;position:relative;z-index:1}.eyebrow{font-weight:800;letter-spacing:.1em;color:#239b94;font-size:.86rem}.hero h1{font-family:YuMincho,"Yu Mincho",serif;font-weight:700;font-size:clamp(2.5rem,5vw,4.7rem);line-height:1.25;letter-spacing:.02em;margin:.3em 0;color:var(--deep)}.lead{font-size:1.12rem;color:#526777;max-width:680px}.cta{border:0;border-radius:999px;padding:16px 25px;background:linear-gradient(135deg,var(--coral),#ffb06d);color:#fff;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:10px;text-decoration:none;box-shadow:0 10px 26px rgba(255,143,134,.28);transition:.2s}.cta:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(255,143,134,.35)}.subnote{font-size:.84rem;color:#6b7f8d;margin-top:12px}.compass{aspect-ratio:1;border:3px solid rgba(99,216,207,.45);border-radius:50%;display:grid;place-items:center;position:relative;background:rgba(255,255,255,.76);box-shadow:0 24px 70px rgba(64,146,153,.14)}.compass:before,.compass:after{content:"";position:absolute;background:rgba(99,216,207,.3)}.compass:before{width:2px;height:88%}.compass:after{height:2px;width:88%}.compass-core{width:58%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,#ddfaf5,#fff3bd);border:2px solid #fff;box-shadow:0 10px 30px rgba(64,146,153,.15);z-index:1}.compass-core strong{font-family:Georgia,serif;font-size:3rem;color:#f28a72}.axis{position:absolute;font-size:.86rem;font-weight:800;color:#367087}.n{top:5%}.e{right:3%;top:48%}.s{bottom:5%}.w{left:3%;top:48%}section{padding:96px 0}.center{text-align:center}.kicker{color:#279f98;font-weight:800;letter-spacing:.08em;font-size:.85rem}.title{font-family:YuMincho,"Yu Mincho",serif;font-size:clamp(2rem,3.5vw,3.1rem);line-height:1.4;margin:.3em 0;color:var(--deep)}.intro{max-width:760px;margin:0 auto;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:42px}.card{background:#fff;border:2px solid #e5f4ef;border-radius:26px;padding:28px;box-shadow:0 14px 38px rgba(53,125,132,.08)}.card:nth-child(1){border-top:7px solid var(--sky)}.card:nth-child(2){border-top:7px solid var(--lemon)}.card:nth-child(3){border-top:7px solid var(--coral)}.card-num{font-family:Georgia,serif;font-size:2rem;color:#31aaa3}.card h3{margin:.1em 0;color:var(--deep)}.card p{color:var(--muted);margin:0}.quiz-shell{background:#fff;border:2px solid #dff2ed;border-radius:30px;box-shadow:0 20px 60px rgba(53,125,132,.12);overflow:hidden;margin-top:40px}.quiz-head{padding:28px 34px;background:linear-gradient(90deg,#d9f9f3,#e5f6ff);color:var(--deep)}.progress-track{height:9px;background:#fff;border-radius:9px;overflow:hidden}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--aqua),var(--sky),var(--coral));transition:width .3s}.progress-label{display:flex;justify-content:space-between;font-size:.86rem;color:#467184;margin-top:8px}.quiz-body{padding:38px}.question{font-size:1.4rem;font-weight:800;line-height:1.6;margin:0 0 25px;color:var(--deep)}.choices{display:grid;gap:11px}.choice{width:100%;border:2px solid #e2f1ed;background:#fff;border-radius:16px;padding:15px 18px;text-align:left;cursor:pointer;color:var(--ink);display:flex;gap:14px;align-items:center;transition:.18s}.choice:hover{border-color:#63d8cf;background:#effcf9;transform:translateX(3px)}.choice span{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#fff1c1;color:#76611f;font-weight:800;flex:0 0 32px}.result{display:none;padding:38px}.result.show{display:block}.score-ring{width:170px;height:170px;border-radius:50%;display:grid;place-items:center;margin:10px auto 24px;background:conic-gradient(var(--coral) var(--pct),#eaf5f2 0);position:relative}.score-ring:after{content:"";position:absolute;inset:13px;background:#fff;border-radius:50%}.score-ring div{z-index:1;text-align:center}.score-ring strong{font-family:Georgia,serif;font-size:2.4rem;display:block;line-height:1;color:var(--deep)}.stage{font-family:YuMincho,"Yu Mincho",serif;font-size:2rem;margin:.2em 0;color:var(--deep)}.result-copy{max-width:680px;margin:0 auto;color:var(--muted)}.bars{max-width:760px;margin:32px auto;display:grid;gap:12px}.bar-row{display:grid;grid-template-columns:145px 1fr 48px;gap:12px;align-items:center;font-size:.9rem}.bar-bg{height:11px;border-radius:8px;background:#eaf3f1;overflow:hidden}.bar-fill{height:100%;background:linear-gradient(90deg,var(--aqua),var(--sky),var(--coral));border-radius:8px}.next-action{background:#fff9d9;border-left:5px solid #ffd45e;padding:22px;text-align:left;border-radius:5px 16px 16px 5px;max-width:760px;margin:26px auto}.result-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.ghost{border:2px solid #bcded8;background:#fff;border-radius:999px;padding:14px 22px;cursor:pointer;color:var(--deep);font-weight:700}.funnel{background:linear-gradient(135deg,#fff7cf,#e8fbf6 52%,#e8f7ff);color:var(--ink)}.funnel .title{color:var(--deep)}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}.step{padding:32px;border:2px solid #fff;background:rgba(255,255,255,.78);box-shadow:0 12px 30px rgba(73,140,143,.08);position:relative;border-radius:24px!important}.step:not(:last-child):after{content:"→";position:absolute;right:-26px;top:44%;z-index:1;width:36px;height:36px;display:grid;place-items:center;background:var(--coral);color:#fff;border:3px solid #fff;border-radius:50%;font-weight:900}.step small{color:#219f98;font-weight:800}.step h3{font-size:1.3rem;color:var(--deep)}.step p{color:var(--muted)}.coach{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}.portrait-placeholder{min-height:430px;border-radius:180px 180px 28px 28px;background:radial-gradient(circle at 25% 20%,#fff6c8,transparent 35%),linear-gradient(155deg,#dff9f3,#ddf2ff 58%,#ffe5df);display:grid;place-items:center;color:var(--deep);padding:42px;text-align:center;box-shadow:inset 0 0 0 2px #fff,0 18px 48px rgba(61,139,144,.11)}.portrait-placeholder strong{font-family:YuMincho,"Yu Mincho",serif;font-size:2rem}.check{padding:0;list-style:none}.check li{padding:8px 0 8px 30px;position:relative}.check li:before{content:"✓";position:absolute;left:0;color:#29a69f;font-weight:900}.offer{background:#edfbf7}.offer-box{max-width:860px;margin:40px auto 0;background:#fff;border:2px solid #dcf1eb;border-radius:28px;padding:42px;box-shadow:0 20px 50px rgba(53,125,132,.1)}.offer-box h3{font-size:1.7rem;color:var(--deep)}.mini{font-size:.88rem;color:var(--muted)}.faq{max-width:820px;margin:38px auto}.faq details{background:#fff;border:2px solid #e4f2ee;border-radius:16px;padding:18px 20px;margin:10px 0}.faq summary{cursor:pointer;font-weight:800;color:var(--deep)}.faq p{color:var(--muted)}footer{background:#f1fbf8;color:#657987;padding:36px 0;font-size:.84rem;border-top:1px solid #dff0eb}.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);background:#315f70;color:#fff;padding:12px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}
-    .privacy-note{max-width:760px;margin:22px auto 0;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding:15px 20px;border:2px solid #dff2ec;border-radius:18px;background:#f7fffc;color:#57717c;font-size:.9rem}.privacy-note span:before{content:"✓";color:#27a59e;font-weight:900;margin-right:7px}.booking-note{margin:22px auto;padding:16px 18px;border-radius:16px;background:#fff8d5;color:#6d5a1f;max-width:650px}
-    @media(max-width:800px){.hero{min-height:auto}.hero-grid{grid-template-columns:1fr;padding:70px 0 60px;gap:42px}.compass{width:min(82vw,390px);margin:auto}.cards,.flow{grid-template-columns:1fr}.step:first-child,.step:last-child{border-radius:18px}.step{border-radius:18px!important}.step:not(:last-child):after{content:"↓";right:calc(50% - 17px);top:auto;bottom:-17px}.coach{grid-template-columns:1fr}.portrait-placeholder{min-height:280px}.bar-row{grid-template-columns:110px 1fr 42px}.quiz-body,.result{padding:26px 20px}section{padding:72px 0}.wrap{width:min(100% - 28px,1120px)}.privacy-note{display:grid;gap:5px;text-align:left}}
-  </style>
-  <style>
-    body, button, .hero h1, .title, .card-num, .score-ring strong, .stage, .portrait-placeholder strong {font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
-    .hero h1,.title{font-weight:800}
-    .hero-grid{grid-template-columns:1fr 1.08fr;gap:46px}
-    .hero-visual{position:relative;border-radius:42px 42px 110px 42px;overflow:hidden;background:#fff;box-shadow:0 26px 70px rgba(64,146,153,.16);border:5px solid rgba(255,255,255,.9);transform:rotate(1deg)}
-    .hero-visual img{width:100%;height:auto;display:block;transform:scale(1.02)}
-    .hero-badge{position:absolute;left:20px;bottom:18px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border:2px solid #dff2ed;border-radius:18px;padding:10px 16px;color:var(--deep);font-weight:800;box-shadow:0 8px 22px rgba(53,125,132,.12)}
-    .money-quote{margin:34px auto 0;padding:18px 22px;background:rgba(255,255,255,.88);border:2px solid #dff2ed;border-radius:18px;box-shadow:0 10px 26px rgba(53,125,132,.08);max-width:760px;text-align:left}
-    .money-quote small{display:block;color:#239b94;font-weight:800;letter-spacing:.08em;margin-bottom:3px}.money-quote p{margin:0;color:var(--deep);font-weight:700;line-height:1.65}
-    .journey-image{width:min(900px,100%);height:330px;object-fit:cover;border-radius:34px;margin:38px auto 0;display:block;box-shadow:0 20px 50px rgba(53,125,132,.14);border:5px solid rgba(255,255,255,.88)}
-    .life-image{width:100%;min-height:430px;height:100%;object-fit:cover;border-radius:180px 180px 28px 28px;box-shadow:0 18px 48px rgba(61,139,144,.14)}
-    .booking-status{margin:22px 0 14px;padding:17px 20px;border:2px solid #eadfc2;border-radius:16px;background:#fff8df;color:#6d5a1f;font-weight:700;text-align:center}
-    .ghost{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
-    .column-cta{margin-top:28px;background:rgba(255,255,255,.8)}
-    .final-cta{padding-top:36px;background:linear-gradient(135deg,#edf8f3,#fff7e8 54%,#f5eaf0)}
-    .trust-strip{padding:0;background:#fff;border-top:1px solid #eee4da;border-bottom:1px solid #eee4da}.trust-list{min-height:72px;display:flex;align-items:center;justify-content:center;gap:34px;flex-wrap:wrap;color:#526777;font-weight:700;font-size:.92rem}.trust-list span:before{content:"✓";color:#398e94;margin-right:8px;font-weight:900}
-    .program-section{background:#fffdf9}.program-summary{max-width:920px;margin:42px auto 0}.program-note{margin:28px auto 0;padding:18px 22px;border-left:5px solid #6ec5cf;background:#f4fbf8;border-radius:5px 16px 16px 5px;color:#526777;text-align:left}
-    .operator{max-width:880px;margin:0 auto;padding:30px 34px;border:2px solid #e9ded3;border-radius:22px;background:#fffdf9;text-align:left}.operator h3{margin:0 0 8px;color:var(--deep)}.operator p{margin:0;color:var(--muted)}
-    .route-flow{max-width:920px;margin:44px auto 0;display:grid;gap:18px}.route-node{background:rgba(255,253,249,.94);border:2px solid #eee4da;border-radius:22px;padding:24px}.route-node strong{display:block;color:var(--deep);font-size:1.22rem}.route-arrow{color:#b46f62;font-size:1.5rem;font-weight:900;line-height:1}.route-choice{display:grid;grid-template-columns:1fr 1fr;gap:18px}.route-node.planning{border-top:7px solid #6ec5cf}.route-node.coaching{border-top:7px solid #dfbd55}.route-node.program{border-top:7px solid #d87b64}.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:42px;text-align:left}.service-card{background:#fff;border:2px solid #e9ded3;border-radius:24px;padding:30px;box-shadow:0 14px 38px rgba(73,85,87,.08)}.service-card h3{margin:.2em 0;color:var(--deep);font-size:1.55rem}.service-label{font-size:.82rem;font-weight:800;letter-spacing:.08em;color:#398e94}.route-result{max-width:760px;margin:24px auto;padding:20px 22px;border:2px solid #dcebe6;border-radius:18px;background:#f6fbf8;text-align:left}.route-result strong{color:var(--deep);display:block;font-size:1.1rem;margin-bottom:3px}.service-cta{margin-top:20px}
-    @media(max-width:800px){.hero-grid{grid-template-columns:1fr;padding:62px 0 54px;gap:38px}.hero-visual{border-radius:30px 30px 76px 30px;transform:none}.hero-badge{font-size:.8rem;left:12px;bottom:12px;padding:8px 12px}.journey-image{height:230px;border-radius:24px}.life-image{min-height:280px;height:300px;border-radius:120px 120px 24px 24px}.trust-list{display:grid;gap:8px;padding:16px 0;justify-content:start}.operator{padding:24px 22px}.route-choice,.service-grid{grid-template-columns:1fr}}
-  </style>
-  <style>
-    :root{--ink:#3d4650;--deep:#172d3b;--aqua:#51bfc7;--sky:#77cbd5;--lemon:#dfbd55;--coral:#df8068;--mint:#edf8f3;--paper:#fffaf4;--muted:#6d7479;--line:#e8dfd5}
-    body{background:var(--paper)}
-    .hero{background:linear-gradient(90deg,rgba(255,250,244,.97) 0%,rgba(255,250,244,.9) 49%,rgba(255,250,244,.3) 100%),url("hbmp-brand-visual.jpg") center/cover no-repeat}
-    .hero:after{border-color:rgba(90,181,188,.2);box-shadow:0 0 0 70px rgba(124,197,205,.06),0 0 0 140px rgba(204,153,184,.06)}
-    .hbmp-brand{width:230px;height:58px;overflow:hidden;margin-bottom:20px;opacity:.92}.hbmp-brand img{width:900px;height:auto;max-width:none;display:block}
-    .eyebrow,.kicker{color:#398e94}
-    .hero-visual{border-radius:18px 110px 18px 110px;border-color:rgba(255,250,244,.96);box-shadow:0 26px 70px rgba(69,92,94,.17)}
-    .hero-badge{border-color:#eadfd3;background:rgba(255,250,244,.94)}
-    .money-quote{background:rgba(255,253,249,.93);border-color:#e9ded3;border-left:6px solid #c092b0}
-    .money-quote small{color:#a5688e}
-    .card{border-color:#eee4da;border-radius:18px 42px 18px 42px;box-shadow:0 14px 38px rgba(73,85,87,.08)}
-    .card:nth-child(1){border-top-color:#6ec5cf}.card:nth-child(2){border-top-color:#dfbd55}.card:nth-child(3){border-top-color:#d87b64}
-    .quiz-shell{border-color:#e9ded3;border-radius:18px 52px 18px 52px;box-shadow:0 20px 60px rgba(73,85,87,.1)}
-    .quiz-head{background:linear-gradient(90deg,#edf7f3,#f7f0d7 58%,#f4e6ed)}
-    .progress-bar,.bar-fill{background:linear-gradient(90deg,#6ec5cf,#dfbd55,#d87b64,#a77ab3)}
-    .choice{border-color:#ece2d9}.choice:hover{border-color:#62bdc5;background:#f6fbf8}
-    .choice span{background:#f5e9bd;color:#6f5a18}
-    .funnel{background:linear-gradient(rgba(255,250,244,.84),rgba(255,250,244,.92)),url("hbmp-brand-visual.jpg") center/cover no-repeat}
-    .step{border-color:#f2e8de;background:rgba(255,253,249,.92)}
-    .offer{background:linear-gradient(135deg,#f1f8f4,#fff7e8 54%,#f5eaf0)}
-    .offer-box{border-color:#e9ded3;box-shadow:0 20px 50px rgba(73,85,87,.09)}
-    .column-link{position:relative;overflow:hidden;background:linear-gradient(100deg,rgba(255,253,249,.94),rgba(255,253,249,.78)),url("hbmp-brand-visual.jpg") center/cover no-repeat!important;border-radius:18px 64px 18px 64px!important}
-    .faq details{border-color:#e9ded3;background:#fffdf9}
-    footer{background:#f5eee6;border-color:#e8ded3}
-    @media(max-width:800px){.hbmp-brand{width:190px;height:48px;margin-bottom:14px}.hbmp-brand img{width:745px}.hero{background-position:62% center}.hero-visual{border-radius:16px 72px 16px 72px}.card{border-radius:16px 34px 16px 34px}.quiz-shell{border-radius:16px 38px 16px 38px}.column-link{border-radius:16px 42px 16px 42px!important}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="人生からお金を考える、3分の豊かさの現在地診断。"><meta name="theme-color" content="#fbfaf6">
+<title>豊かさの現在地診断｜HappyBalance MoneyProgram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#18343a;--text:#40565a;--muted:#718184;--paper:#fbfaf6;--mint:#e5f4ed;--teal:#347873;--sand:#f5e7c9;--peach:#f4d7c8;--line:#dce8e3;--shadow:0 18px 55px rgba(41,83,79,.1)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--text);font-family:"Noto Sans JP",sans-serif;line-height:1.9;letter-spacing:.02em}img{display:block;max-width:100%}a{color:inherit}button{font:inherit}section{padding:100px 24px}.wrap{width:min(1080px,100%);margin:auto}.narrow{width:min(780px,100%);margin:auto}.center{text-align:center}.eyebrow{margin:0 0 13px;color:var(--teal);font-size:.76rem;font-weight:700;letter-spacing:.18em}.title{margin:0;color:var(--ink);font-size:clamp(2rem,4.2vw,3.3rem);line-height:1.4}.lead{max-width:720px;margin:22px auto 0;font-size:1.08rem}.soft{color:var(--muted)}header{position:absolute;z-index:5;top:0;left:0;padding:22px 28px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;line-height:1.2}.mark{width:34px;height:34px;padding:6px;border-radius:50%;background:conic-gradient(#5aaea7,#efb778,#d98588,#8b85bd,#5aaea7)}.mark:after{content:"";display:block;width:100%;height:100%;border-radius:50%;background:var(--paper)}
+.hero{min-height:100svh;padding:120px 24px 70px;display:grid;align-items:center;overflow:hidden;background:radial-gradient(circle at 10% 10%,#edf8f3,transparent 31%),radial-gradient(circle at 90% 85%,#faece5,transparent 32%),var(--paper)}.hero-grid{width:min(1160px,100%);margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}.hero h1{margin:14px 0 23px;color:var(--ink);font-size:clamp(2.7rem,5.7vw,5.25rem);font-weight:600;line-height:1.16;letter-spacing:-.035em}.hero-copy p{margin:.35em 0}.thought{margin-top:22px!important;padding-left:18px;border-left:2px solid #abd3c7;color:var(--ink)}.visual{position:relative}.visual:before{content:"";position:absolute;inset:-22px 20px 30px -22px;border:1px solid #bdded4;border-radius:44% 56% 48% 52%;transform:rotate(-4deg)}.visual img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:48% 48% 24px 24px;filter:saturate(.82);box-shadow:var(--shadow)}.visual-note{position:absolute;z-index:2;right:-10px;bottom:35px;max-width:245px;padding:15px 18px;border:1px solid var(--line);border-radius:17px;background:#fffffff0;color:var(--ink);font-size:.87rem;box-shadow:var(--shadow)}.cta{display:inline-flex;align-items:center;justify-content:center;margin-top:27px;padding:15px 25px;border:0;border-radius:999px;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 12px 30px #34787335;cursor:pointer;transition:.2s}.cta:hover{transform:translateY(-2px);background:#286560}.micro{margin:11px 0 0;color:var(--muted);font-size:.77rem}
+.affirm{background:#fff}.two{display:grid;grid-template-columns:.82fr 1.18fr;gap:68px;align-items:start}.sticky{position:sticky;top:70px}.big-copy{margin:28px 0 0;color:var(--ink);font-size:clamp(1.35rem,2.7vw,2.1rem);font-weight:500;line-height:1.65}.card{padding:34px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#fff,#f5faf7)}.checks{display:grid;gap:9px;margin:23px 0 0;padding:0;list-style:none}.checks li{position:relative;padding:13px 15px 13px 45px;border:1px solid #e6eeea;border-radius:14px;background:#fff}.checks li:before{content:"";position:absolute;left:16px;top:18px;width:12px;height:12px;border:2px solid #79aaa1;border-radius:4px}.turn{margin-top:27px;padding:22px;border-radius:18px;background:var(--sand);color:var(--ink);font-weight:500}
+.reframe{background:linear-gradient(var(--paper),#f1f7f4)}.reframe-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}.question-stack{display:grid;gap:15px;margin-top:28px}.question-stack p{margin:0;padding:17px 19px;border-left:3px solid #8db8ae;border-radius:0 14px 14px 0;background:#ffffffaa;color:var(--ink)}.steps{display:grid;gap:11px}.step{padding:22px 24px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 30px #29534f0f}.step b{display:block;color:var(--teal);font-size:.76rem;letter-spacing:.18em}.step strong{display:block;color:var(--ink);font-size:1.22rem}.arrow{text-align:center;color:#6e9e95;font-size:1.5rem}
+.pause{background:#193b40;color:#edf5f1;text-align:center}.pause .title{color:#fff}.pause .eyebrow{color:#acd7cc}.pause-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:52px;border:1px solid #ffffff29;background:#ffffff29;gap:1px}.pause-grid p{margin:0;padding:32px 20px;background:#193b40}.silence{margin:65px 0;color:#c8ded9;font-size:.85rem;letter-spacing:.1em}.reconnect h3{margin:0;color:#fff;font-size:clamp(2rem,4vw,3.1rem)}.reconnect>p{max-width:690px;margin:23px auto 0}.formula{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:38px;color:#fff;font-size:clamp(1rem,2.3vw,1.55rem);font-weight:600}.formula span{padding:10px 16px;border:1px solid #ffffff4a;border-radius:999px}.formula b{color:#f2d696}
+.numbers{background:#fff}.number-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}.permission{margin-top:28px;padding:24px;border-radius:19px;background:#eef8f4;color:var(--ink)}.number-qs{border-top:1px solid var(--line)}.number-qs p{margin:0;padding:17px 3px;border-bottom:1px solid var(--line);color:var(--ink)}
+.diagnosis{background:linear-gradient(#eef7f3,var(--paper))}.quiz{width:min(850px,100%);margin:48px auto 0;overflow:hidden;border:1px solid var(--line);border-radius:30px;background:#fff;box-shadow:var(--shadow)}.quiz-head{padding:24px 29px 17px;background:#f6faf8}.meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem;font-weight:600}.progress{height:6px;margin-top:13px;border-radius:99px;background:#e3ece9;overflow:hidden}.progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,#6ab2a6,#e4b463);transition:.25s}.quiz-body,.result{padding:40px}.question{min-height:95px;margin:0;color:var(--ink);font-size:clamp(1.22rem,3vw,1.8rem);font-weight:600;line-height:1.55}.choices{display:grid;gap:11px;margin-top:28px}.choice{display:flex;align-items:center;gap:14px;width:100%;padding:16px 18px;border:1px solid var(--line);border-radius:15px;background:#fff;color:var(--text);text-align:left;cursor:pointer}.choice:hover{border-color:#78aaa1;background:#f5fbf8}.choice span{display:grid;place-items:center;flex:0 0 29px;height:29px;border-radius:50%;background:var(--mint);color:var(--teal);font-weight:700}.privacy{margin:19px 0 0;color:var(--muted);font-size:.77rem}.result{display:none}.result.show{display:block}.result-title{margin:7px auto;color:var(--ink);font-size:clamp(1.55rem,3.5vw,2.3rem);line-height:1.5}.result-lead{max-width:680px;margin:13px auto}.viz{display:grid;grid-template-columns:minmax(260px,.85fr) 1.15fr;gap:32px;align-items:center;margin:34px 0}.radar{padding:14px;border-radius:23px;background:#f5faf7;text-align:center}.radar canvas{width:100%;max-width:330px;height:auto}.bars{display:grid;gap:17px}.bar-row{display:grid;grid-template-columns:105px 1fr 48px;gap:11px;align-items:center;font-size:.84rem}.bar-bg{height:11px;border-radius:99px;background:#e5ece9;overflow:hidden}.bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#62a99f,#e4b361)}.insights{display:grid;grid-template-columns:1fr 1fr;gap:13px}.insight{padding:19px;border:1px solid var(--line);border-radius:17px}.insight b{display:block;margin-bottom:4px;color:var(--teal);font-size:.75rem}.insight p{margin:0}.nextq{margin-top:25px;padding:24px;border-radius:19px;background:var(--sand);text-align:left}.nextq h4{margin:0 0 9px;color:var(--ink)}.nextq ol{margin:0;padding-left:1.3em}.result-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:23px}.ghost{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border:1px solid #a9c7c0;border-radius:999px;background:#fff;color:var(--teal);text-decoration:none;font-weight:600;cursor:pointer}
+.paths{background:#fff}.path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:44px}.path{display:flex;flex-direction:column;padding:27px;border:1px solid var(--line);border-top:5px solid var(--tone,#84b8ae);border-radius:22px;background:#fff;box-shadow:0 14px 38px #29534f12;text-align:left}.path:nth-child(2){--tone:#e5bd65}.path:nth-child(3){--tone:#dc8f76}.path small{color:var(--teal);font-weight:700;letter-spacing:.14em}.path h3{margin:7px 0;color:var(--ink);font-size:1.35rem}.path .ghost{margin-top:auto}.choice-note{margin-top:25px;color:var(--muted)}
+.services{background:var(--paper)}.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:27px;margin-top:48px}.service{overflow:hidden;border:1px solid var(--line);border-radius:27px;background:#fff}.service img{width:100%;height:250px;object-fit:cover;filter:saturate(.8)}.service-body{padding:29px}.service h3{margin:3px 0 14px;color:var(--ink);font-size:1.65rem}.service ul{padding-left:1.2em}.flow{display:flex;flex-wrap:wrap;gap:6px;margin:17px 0}.flow span{padding:5px 9px;border-radius:999px;background:#eff8f4;font-size:.75rem}.quote-card{margin-top:58px;padding:30px;border:1px solid #eadfc9;border-radius:22px;background:#fffdf7;text-align:center}.quote-card blockquote{margin:0;color:var(--ink);font-size:clamp(1.08rem,2.5vw,1.5rem)}.quote-card small{color:var(--muted)}
+.trust{background:#fff}.resources{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;margin-top:43px}.column-card{padding:29px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(145deg,#f1faf6,#fff6ea)}.column-card h3{margin:4px 0;color:var(--ink);font-size:1.5rem}.faq{display:grid;gap:9px}.faq details{border:1px solid var(--line);border-radius:15px}.faq summary{position:relative;padding:17px 43px 17px 19px;color:var(--ink);font-weight:600;cursor:pointer;list-style:none}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"＋";position:absolute;right:17px;color:var(--teal)}.faq details[open] summary:after{content:"−"}.faq details p{margin:0;padding:0 19px 19px}.notice{margin-top:40px;padding:23px;border-radius:18px;background:#f5f7f5;color:var(--muted);font-size:.82rem}.notice strong{color:var(--ink)}
+.closing{position:relative;overflow:hidden;background:#eef7f3;text-align:center}.closing-lines{margin:32px auto 0}.closing-lines p{margin:.4em}.brand-message{margin:42px 0 0;color:var(--ink);font-size:clamp(1.7rem,3.7vw,2.7rem);font-weight:600}.footer{padding:27px 24px;background:#17383d;color:#d7e4e1;text-align:center;font-size:.77rem}.footer p{margin:3px}
+.cta:focus-visible,.choice:focus-visible,.ghost:focus-visible,summary:focus-visible{outline:3px solid #e5b85f;outline-offset:3px}
+@media(max-width:820px){section{padding:76px 20px}.hero{min-height:auto;padding-top:105px}.hero-grid,.two,.reframe-grid,.number-grid,.service-grid,.resources{grid-template-columns:1fr}.hero-grid,.two,.reframe-grid,.number-grid{gap:40px}.sticky{position:static}.visual{width:min(500px,90%);margin:auto}.visual img{aspect-ratio:1.15/1}.visual-note{right:-6px;bottom:17px}.pause-grid{grid-template-columns:1fr}.viz{grid-template-columns:1fr}.path-grid{grid-template-columns:1fr}.service img{height:225px}}
+@media(max-width:520px){body{line-height:1.82}header{padding:16px 18px}.brand{font-size:.8rem}.mark{width:29px;height:29px}.hero{padding:95px 18px 58px}.hero h1{font-size:2.62rem}.visual{width:100%}.visual-note{position:relative;right:auto;bottom:auto;margin:-23px 12px 0 auto}.title{font-size:2rem}.quiz{border-radius:21px}.quiz-head{padding:19px}.quiz-body,.result{padding:29px 21px}.question{font-size:1.22rem}.choice{padding:14px 13px}.insights{grid-template-columns:1fr}.bar-row{grid-template-columns:80px 1fr 38px}.service-body,.path,.card,.column-card{padding:22px}.cta{width:100%}.result-actions .ghost{width:100%}.formula b:nth-of-type(3){width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta,.progress span{transition:none}}
+</style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="hbmp-brand"><img src="hbmp-brand-visual.jpg" alt="HappyBalance MoneyProgram"></div>
-        <div class="eyebrow">無料・約5分｜お金と暮らしのかんたん診断</div>
-        <h1>お金のモヤモヤを、<br>笑顔のきっかけに。</h1>
-        <p class="lead">20の質問に答えるだけで、お金との付き合い方が見えてきます。むずかしい知識は必要ありません。あなたらしい豊かさへの“小さな一歩”を、一緒に見つけましょう。</p>
-        <a class="cta" href="#diagnosis">無料診断で現在地を知る <span>→</span></a>
-        <div class="subnote">名前やメールの登録は不要です。結果はすぐにわかります。</div>
-      </div>
-      <div class="hero-visual"><img src="solo-future.webp" alt="明るい部屋で自分らしい未来について考える一人の人物"><div class="hero-badge">自分らしい未来を、ゆっくり描こう</div></div>
-    </div>
-  </header>
+<header><a class="brand" href="#top"><span class="mark" aria-hidden="true"></span><span>HappyBalance<br>MoneyProgram</span></a></header>
+<main>
+<section class="hero" id="top"><div class="hero-grid"><div>
+<p class="eyebrow">MONEY &amp; LIFE COMPASS</p><h1>収入は増えた。<br>でも、自由は<br>増えていますか？</h1>
+<div class="hero-copy"><p>仕事を頑張ってきた。生活にも困っていない。<br>貯蓄も、投資も、それなりにしている。</p><p class="thought">それでも、ときどき思う。<br>「このまま働き続けることが、本当に自分の望んだ人生なんだろうか。」</p><p><strong>お金の正解は、人生の数だけあります。</strong></p></div>
+<a class="cta" href="#diagnosis">3分で豊かさの現在地を診断する →</a><p class="micro">無料｜約3分｜個人情報入力不要｜結果はその場で確認</p>
+</div><div class="visual"><img src="solo-future.webp" alt="穏やかな光の中で自分の未来を思い描く一人の人物"><div class="visual-note">大切なのは、いくら持っているかだけではなく、そのお金でどんな人生を選べるか。</div></div></div></section>
 
-  <aside class="trust-strip" aria-label="診断の安心情報"><div class="wrap trust-list"><span>名前・メール登録不要</span><span>回答内容は保存されません</span><span>特定の金融商品を販売する診断ではありません</span></div></aside>
+<section class="affirm"><div class="wrap two"><div class="sticky"><p class="eyebrow">01 — ACKNOWLEDGE</p><h2 class="title">ここまで、ちゃんと<br>頑張ってきた。</h2><p class="big-copy">今までの選択が、間違っていたわけではありません。</p></div><div class="card">
+<p>キャリアを積み、収入を上げ、大切なものを守り、将来のために貯蓄や投資も考えてきた。その積み重ねが、今のあなたをつくっています。</p><p>ただ、人生のある地点から、問いが少しずつ変わることがあります。</p><p class="big-copy">「もっと稼ぐには？」ではなく、<br>「何のために稼ぐんだろう？」</p>
+<ul class="checks"><li>年収は上がったのに、安心感は思ったほど増えていない</li><li>NISAや投資はしている。でも「これで十分」とは言えない</li><li>仕事を辞めたいわけではない。でも「辞められない」のは違うと思う</li><li>大切な人や大切なことに、もっと時間を使いたい</li><li>10年後に必要な資産額を、具体的には答えられない</li><li>仕事以外にも、本当はやってみたいことがある</li><li>老後だけでなく「今」も楽しみたい</li><li>お金について調べているのに、情報ばかり増えていく</li></ul>
+<p class="turn">もし一つでも心に引っかかったなら、足りないのは「もっとお金を増やす方法」ではないのかもしれません。</p>
+</div></div></section>
 
-  <main>
-    <section>
-      <div class="wrap center">
-        <div class="kicker">こんな方におすすめです</div>
-        <h2 class="title">お金のこと、ひとりで抱えていませんか？</h2>
-        <p class="intro">知識や経験は必要ありません。今の気持ちに近いものが一つでもあれば、まずは気軽に診断してみてください。</p>
-        <div class="cards">
-          <div class="card"><div class="card-num">01</div><h3>お金のことを考えると、少し不安</h3><p>漠然としたモヤモヤを、今の自分を知るきっかけに変えたい方へ。</p></div>
-          <div class="card"><div class="card-num">02</div><h3>何から整えればいいかわからない</h3><p>家計や将来のために、無理なく始められる一歩を見つけたい方へ。</p></div>
-          <div class="card"><div class="card-num">03</div><h3>お金も、時間も、暮らしも大切にしたい</h3><p>数字だけではなく、自分らしい豊かさを考えていきたい方へ。</p></div>
-        </div>
-        <div class="money-quote" aria-live="polite"><small>今日のお金のことば</small><p id="moneyQuote"></p></div>
-      </div>
-    </section>
+<section class="reframe"><div class="wrap reframe-grid"><div><p class="eyebrow">02 — REFRAME</p><h2 class="title">お金の問題だと思っていた。<br>実は「人生の目的地」の問題かもしれない。</h2><div class="question-stack"><p>投資先を決める前に、何のために増やすのかが決まっていますか？</p><p>老後資金を計算する前に、どんな老後を送りたいのかが決まっていますか？</p><p>働き方を変える前に、自由になった時間で何をしたいのかが決まっていますか？</p></div></div>
+<div class="steps" aria-label="人生からお金、行動へ考える流れ"><div class="step"><b>LIFE</b><strong>どう生きたい？</strong><span>大切にしたいものと、望む時間を言葉にする</span></div><div class="arrow">↓</div><div class="step"><b>MONEY</b><strong>そのために、いくら必要？</strong><span>未来を数字にし、現在地との差を知る</span></div><div class="arrow">↓</div><div class="step"><b>ACTION</b><strong>では、今日から何をする？</strong><span>自分で選んだ一歩を、行動と習慣へつなぐ</span></div></div></div></section>
 
-    <section id="diagnosis" style="padding-top:30px">
-      <div class="wrap">
-        <div class="center"><div class="kicker">LET'S TRY!</div><h2 class="title">あなたの「お金と暮らし」をチェック</h2><p class="intro">最近3か月くらいの自分を思い出して、いちばん近い答えを選んでください。正解・不正解はありません。</p><div class="privacy-note"><span>回答内容は保存されません</span><span>個人情報は収集しません</span></div></div>
-        <div class="quiz-shell" id="quiz">
-          <div class="quiz-head"><div class="progress-track"><div class="progress-bar" id="progress"></div></div><div class="progress-label"><span id="axisLabel">願いと価値観</span><span id="countLabel">1 / 20</span></div></div>
-          <div class="quiz-body" id="quizBody"><p class="question" id="question"></p><div class="choices" id="choices"></div></div>
-          <div class="result" id="result"></div>
-        </div>
-      </div>
-    </section>
+<section class="pause"><div class="narrow"><p class="eyebrow">03 — PAUSE &amp; IMAGINE</p><h2 class="title">もし、お金の心配がなかったら。</h2><div class="pause-grid"><p>誰と、どんな時間を過ごしたいですか？</p><p>どんな仕事をしたいですか？</p><p>どこへ行ってみたいですか？</p><p>何を学びたいですか？</p><p>誰のために、何をしてあげたいですか？</p><p>「やっておけばよかった」と思いたくないことは？</p></div><p class="silence">少しだけ、答えを急がない時間を。</p>
+<div class="reconnect"><h3>その人生には、<br>いくら必要でしょうか。</h3><p>旅行でも、仕事でも、学びでも、挑戦でも、誰かへの貢献でもいい。何を選ぶかを、こちらで決めることはできません。</p><p><strong>大切なのは、何を選ぶかではなく、選べる状態をつくること。</strong></p><div class="formula"><span>時間</span><b>×</b><span>お金</span><b>×</b><span>意思</span><b>＝</b><span>人生の選択肢</span></div></div></div></section>
 
-    <section class="funnel">
-      <div class="wrap center">
-        <div class="kicker">診断結果に合わせた次のステップ</div>
-        <h2 class="title">数字を整える？ 気持ちを整える？</h2>
-        <p class="intro">診断で今の自分が見えたら、必要なサポートを選びます。どちらから始めても、その先はMoney Programで学びと行動を習慣へつなげます。</p>
-        <img class="journey-image" src="coaching-moment.webp" alt="オンラインで対話しながら未来の計画を書き留める様子" loading="lazy">
-        <div class="route-flow">
-          <div class="route-node"><small>STEP 1</small><strong>お金の診断で現在地を知る</strong></div>
-          <div class="route-arrow" aria-hidden="true">↓</div>
-          <div class="route-choice">
-            <div class="route-node planning"><small>数字・家計・将来が気になる方</small><strong>マネープランニング</strong><span>今と未来を数字で見える形に</span></div>
-            <div class="route-node coaching"><small>目的・気持ち・優先順位が気になる方</small><strong>コーチング</strong><span>望む暮らしと次の一歩を言葉に</span></div>
-          </div>
-          <div class="route-arrow" aria-hidden="true">↓</div>
-          <div class="route-node program"><small>STEP 3</small><strong>Money Program</strong><span>学びを実践し、続けられる習慣へ</span></div>
-        </div>
-      </div>
-    </section>
+<section class="numbers"><div class="wrap number-grid"><div><p class="eyebrow">04 — MAKE IT REAL</p><h2 class="title">思い描いた未来を、数字へ。</h2><p class="lead">感覚だけでも、数字だけでも、人生の計画にはなりません。両方を一枚につなぐことで、次の一歩が具体的になります。</p><div class="permission"><strong>答えられなくても、大丈夫です。</strong><br>未来を変える前に、まず現在地を知る。そこから始められます。</div><a class="cta" href="#diagnosis">今の自分を確かめる →</a></div>
+<div class="number-qs"><p>10年後、どんな暮らしをしていますか？</p><p>そのために必要な資産額は？</p><p>現在の純資産は？</p><p>毎月いくら資産形成する？</p><p>何歳まで、どんな働き方をする？</p><p>収入源はいくつ持つ？</p><p>その数字を、一枚の計画として説明できますか？</p></div></div></section>
 
-    <section class="offer" id="support">
-      <div class="wrap center">
-        <div class="kicker">あなたに合う整え方を選べます</div><h2 class="title">診断の次にできる、2つのこと。</h2><p class="intro">どちらが正解ということではありません。今いちばん気になっていることから始められます。</p>
-        <div class="service-grid">
-          <article class="service-card" id="planning"><div class="service-label">MONEY PLANNING</div><h3>マネープランニング</h3><p>理想の暮らしと今の状態を数字で見える形にし、その差を整理します。</p><ul class="check"><li>収入・支出・貯蓄などの現在地</li><li>将来必要になるお金と優先順位</li><li>使う・貯める・増やす・守るのバランス</li><li>今日から始める具体的な行動</li></ul><p class="mini">投稿にある「理想を描く→現在地を明確にする→差を見つける→習慣にする」という考え方を反映しています。</p><p class="service-cta"><a class="cta" href="application/?service=planning">サンプル申込フォームへ →</a></p></article>
-          <article class="service-card" id="coaching"><div class="service-label">COACHING</div><h3>コーチング</h3><p>数字だけでは見えにくい、お金への気持ちや本当に望む暮らしを対話で整理します。</p><ul class="check"><li>診断結果をわかりやすく読み解く</li><li>大切にしたい価値観を言葉にする</li><li>迷いや心のブレーキを整理する</li><li>今から始める小さな一歩を決める</li></ul><p class="mini">お金・時間・健康・大切な人とのつながりを含め、自分らしい豊かさを考えます。</p><p class="service-cta"><a class="cta" href="application/?service=coaching">サンプル申込フォームへ →</a></p></article>
-        </div>
-        <div class="booking-status">現在はテスト公開中です。お申し込みボタンから、サンプルフォームをお試しいただけます。</div>
-      </div>
-    </section>
+<section class="diagnosis" id="diagnosis"><div class="wrap center"><p class="eyebrow">05 — YOUR CURRENT POSITION</p><h2 class="title">豊かさの現在地診断</h2><p class="lead">3分で、あなたの人生とお金の「つながり」を可視化します。正解を当てるテストではありません。今の自分に一番近いものを選んでください。</p>
+<div class="quiz" aria-live="polite"><div class="quiz-head"><div class="meta"><span id="layerLabel">準備</span><span id="count">START</span></div><div class="progress"><span id="progressBar"></span></div></div><div class="quiz-body" id="quizBody"><p class="question" id="question">20の問いから、今の自分を静かに見つめてみましょう。</p><div class="choices" id="choices"><button class="cta" id="startButton" type="button">診断を始める →</button></div><p class="privacy">回答内容・診断結果は保存されません。個人情報の入力もありません。</p></div><div class="result" id="result"></div></div></div></section>
 
-    <section class="program-section">
-      <div class="wrap center">
-        <div class="kicker">HAPPYBALANCE MONEYPROGRAM</div>
-        <h2 class="title">学ぶだけで終わらない。<br>暮らしの中で、お金の習慣を育てる。</h2>
-        <p class="intro">Money Programは、お金の基本を自分の暮らしに置き換え、無理なく続けられる形へ整えていく学びのプログラムです。</p>
-        <div class="cards program-summary">
-          <div class="card"><div class="card-num">01</div><h3>知る</h3><p>お金の流れや考え方を、難しい言葉を使わずに学びます。</p></div>
-          <div class="card"><div class="card-num">02</div><h3>整える</h3><p>家計・働き方・備えを、自分に合った順番で見直します。</p></div>
-          <div class="card"><div class="card-num">03</div><h3>続ける</h3><p>学びを小さな行動へ変え、暮らしの習慣として育てます。</p></div>
-        </div>
-        <p class="program-note">内容・期間・参加方法などの詳細は、準備が整い次第ご案内します。まずは無料診断で、今の自分に必要なテーマをご確認ください。</p>
-      </div>
-    </section>
+<section class="paths" id="paths"><div class="wrap center"><p class="eyebrow">06 — CHOOSE YOUR WAY</p><h2 class="title">あなたの次の一歩に、<br>正解はひとつではありません。</h2><p class="lead">今の自分に合う進み方を、自分で選ぶ。その選択も、いつでも変えて構いません。</p><div class="path-grid">
+<article class="path"><small>PATH 1</small><h3>自分で進む</h3><p>診断結果を持ち帰り、見えてきた問いをもとに、今日から自分で実践する。</p><p class="soft">ここで無料で終えることも、大切な選択です。</p><a class="ghost" href="#diagnosis">診断結果を見直す</a></article>
+<article class="path"><small>PATH 2</small><h3>自分の答えを明確にする</h3><p>「どう生きたいか」を、対話を通じて自分の言葉にしていく。</p><p class="soft">数字を考える前に、目的や優先順位を整理したい方へ。</p><a class="ghost" href="application/?service=coaching">コーチングを見る</a></article>
+<article class="path"><small>PATH 3</small><h3>人生とお金をつなげる</h3><p>望む未来を数字にし、知識・行動・習慣まで体系的に整える。</p><p class="soft">自分の計画をつくり、実践へ進みたい方へ。</p><a class="ghost" href="money-program/">Money Programを見る</a></article>
+</div><p class="choice-note">どの道を選ぶかを決めるのは、あなた自身です。</p></div></section>
 
-    <section>
-      <div class="wrap">
-        <div class="offer-box center column-link" style="margin-top:0">
-          <div class="kicker">MONEY PROGRAM COLUMN</div>
-          <h2 class="title">お金のことを、暮らしの言葉で。</h2>
-          <p class="intro">Facebook投稿の分析から読み解いた、マネープログラムの考え方・学べる内容・受講による変化を体系化しました。暮らしに生かす10本のコラムは、気になる記事だけ開いて読めます。</p>
-          <p style="margin:28px 0 0"><a class="ghost column-cta" href="money-program/">マネープログラム・コラムを読む →</a></p>
-        </div>
-      </div>
-    </section>
+<section class="services"><div class="wrap"><div class="center"><p class="eyebrow">07 — SUPPORT</p><h2 class="title">必要なときに、必要な支援を。</h2><p class="lead">二つの支援は競うものではなく、今どこを整理したいかによって役割が異なります。</p></div><div class="service-grid">
+<article class="service"><img src="coaching-moment.webp" alt="一対一の対話を通じて考えを整理する一人の人物" loading="lazy"><div class="service-body"><p class="eyebrow">COACHING</p><h3>数字の前に、「自分はどうしたい？」を整理する。</h3><p>仕事、大切な人、お金、時間、これからの人生。答えを外からもらうのではなく、対話を通じて、自分の中にある答えを言葉にしていく時間です。</p><ul><li>本当に大切にしたいもの</li><li>お金を増やしたい理由</li><li>選びたい未来と次の一歩</li></ul><a class="ghost" href="application/?service=coaching">コーチングのサンプル申込を見る</a></div></article>
+<article class="service"><img src="solo-future.webp" alt="自分らしい未来とお金の計画を考える一人の人物" loading="lazy"><div class="service-body"><p class="eyebrow">MONEY PROGRAM</p><h3>望む人生を、お金という現実につなげる。</h3><p>投資方法だけを学ぶ講座ではありません。未来を描き、数字にし、現在地との差を知り、必要な知識を選び、実践と習慣へつなげます。</p><div class="flow"><span>現在地</span><span>未来</span><span>数字</span><span>差</span><span>知識</span><span>選択</span><span>実践</span><span>習慣</span></div><p><strong>「知っている」を、「できている」へ。</strong></p><a class="ghost" href="money-program/">プログラムとコラムを読む</a></div></article>
+</div><div class="quote-card" aria-live="polite"><p class="eyebrow">TODAY'S QUESTION</p><blockquote id="dailyQuote">お金は、何かを得るためだけでなく、何を選ぶかを映すもの。</blockquote><small>アクセスするたびに、別の問いをお届けします</small></div></div></section>
 
-    <section style="padding-top:24px">
-      <div class="wrap"><div class="operator"><h3>このページについて</h3><p><strong>本ページは検証用のサンプルです。</strong><br>Happy Balance Money Programは株式会社AWARENESSが提供するプログラムですが、本ページは同社の公式申込ページではありません。掲載している診断、マネープランニング・コーチングの案内、申込フォームは、すべて動作確認用です。</p></div></div>
-    </section>
+<section class="trust"><div class="wrap center"><p class="eyebrow">08 — LEARN &amp; TRUST</p><h2 class="title">自分のペースで、考えを深める。</h2></div><div class="wrap resources"><div class="column-card"><p class="eyebrow">COLUMN</p><h3>Money Program コラム</h3><p>「マネープログラムとは」「学べる内容」「受講による変化」と、日々の暮らしに生かせるお金の豆知識をまとめています。</p><p>長い記事は、タイトルと概要を見て、気になるものだけアコーディオンで開けます。</p><a class="ghost" href="money-program/">コラムを読む →</a></div>
+<div class="faq"><details><summary>診断すると、申し込みが必要ですか？</summary><p>いいえ。診断だけで終了できます。結果を持ち帰り、ご自身で進む選択も同じように大切にしています。</p></details><details><summary>投資経験がなくても利用できますか？</summary><p>はい。金融知識を試す診断ではありません。人生・時間・お金のつながりを振り返るための診断です。</p></details><details><summary>コーチングとMoney Programの違いは？</summary><p>コーチングは、数字を考える前に「自分はどうしたいか」を対話で言葉にする時間です。Money Programは、望む未来を数字と計画につなぎ、知識・行動・習慣まで体系的に整えます。</p></details><details><summary>金融商品の販売を目的としていますか？</summary><p>本ページと診断は、特定の金融商品の勧誘・販売を目的としていません。診断結果は一般的な自己理解のためのもので、投資・税務・法律上の個別助言ではありません。</p></details><details><summary>診断結果や個人情報は保存されますか？</summary><p>診断の回答・結果は保存されません。個人情報の入力もありません。申込フォームも現在はサンプル表示で、入力内容の送信・保存は行いません。</p></details></div></div>
+<div class="wrap notice"><strong>ご確認ください</strong><br>現在はテスト公開中です。各案内ボタンから、別ページのサンプル申込フォームをお試しいただけます。本ページは株式会社AWARENESSが提供する「Happy Balance Money Program」の考え方をもとに構成した案内ページですが、正式な募集・申込ページではありません。運営会社：株式会社AWARENESS</div></section>
 
-    <section>
-      <div class="wrap"><div class="center"><div class="kicker">FAQ</div><h2 class="title">よくある質問</h2></div><div class="faq">
-        <details><summary>診断だけでも大丈夫ですか？</summary><p>もちろんです。診断は無料で、結果もすぐに見られます。コーチングに申し込まなくても大丈夫です。</p></details>
-        <details><summary>お金のことに詳しくなくてもできますか？</summary><p>はい、大丈夫です。むずかしい計算や専門知識は使いません。ふだんの暮らしについて答えるだけです。</p></details>
-        <details><summary>投資商品を勧められることはありますか？</summary><p>この診断やコーチングは、特定の金融商品を売るためのものではありません。専門的な相談が必要なときは、その分野の専門家をご案内します。</p></details>
-        <details><summary>Money Programでは何をするのですか？</summary><p>お金について学ぶだけでなく、ご自身の暮らしに合った習慣を、仲間と楽しく続けていくプログラムです。詳しい内容・期間・料金は、準備ができ次第お知らせします。</p></details>
-      </div></div>
-    </section>
-
-    <section class="final-cta">
-      <div class="wrap center"><div class="kicker">無料・約5分</div><h2 class="title">今の自分を知るところから、<br>始めてみませんか？</h2><p class="intro">20の質問に答えるだけ。名前やメールの登録は必要ありません。</p><p style="margin:28px 0 0"><a class="cta" href="#diagnosis">無料診断を始める →</a></p></div>
-    </section>
-  </main>
-  <footer><div class="wrap"><strong>HappyBalance MoneyProgram</strong><br>© Money &amp; Life Compass<br>この診断は、ご自身のお金との付き合い方を見つめるためのものです。投資・税金・法律についての個別のアドバイスではありません。<br>本ページは株式会社AWARENESSの公式ページではなく、検証用サンプルです。</div></footer>
-  <div class="toast" id="toast" role="status"></div>
-  <script>
-    const axes=[
-      {name:'願いと価値観',short:'願い',action:'「お金にゆとりができたら、どんな毎日を送りたい？」を自由に書き出してみましょう。'},
-      {name:'現在地と習慣',short:'現在地',action:'毎月入るお金、出るお金、貯めているお金を、まず1枚に書いてみましょう。'},
-      {name:'働き方と収入',short:'働き方',action:'今の仕事に加えて、未来の助けになる小さな収入や仕組みを一つ考えてみましょう。'},
-      {name:'備えと資産づくり',short:'備え',action:'急な出費への貯金、保険、投資の順に、わかるところから確認してみましょう。'},
-      {name:'時間と幸せ',short:'幸せ',action:'今週、大切な人や自分のために使う時間を、先に予定へ入れてみましょう。'}
-    ];
-    const questions=[
-      'お金にゆとりができたら、どんな毎日を送りたいか思い浮かべられる。','大きな買い物の前に、「自分にとって本当に大切？」と考えている。','お金だけでなく、健康や大切な人との時間も大事にしている。','自分やまわりの人が笑顔になるお金の使い方を考えている。',
-      '毎月、いくら入って、いくら使っているかを知っている。','貯金・投資・ローンを含め、今のお金の状態をだいたい知っている。','収入が入ったら、先に貯金や積み立てへ回している。','月に1回、お金の状態を振り返る時間をつくっている。',
-      '今の働き方の良いところと、変えたいところを説明できる。','一つの仕事だけに頼りすぎない未来を考えている。','働いた時間だけに頼らない収入を、少しずつ育てている。','自分が休んでいるときも役立つ商品や仕組みに関心がある。',
-      '急な出費に備える貯金を用意している。','保険・税金・ローンなど、家計に関わる大きなお金を把握している。','投資では、良い点だけでなく注意点も確かめている。','焦って増やすより、長くコツコツ続けることを大切にしている。',
-      'お金のために、健康や大切な人との時間をいつも後回しにはしていない。','将来の自分に大切なことへ、時間やお金を使っている。','お金にゆとりができたら増やしたい時間が決まっている。','今の暮らしにも、「幸せ」「ありがたい」と感じる時間がある。'
-    ];
-    const choiceLabels=['あまり当てはまらない','少し当てはまる','よく当てはまる'];
-    const stages=[
-      {max:27,name:'Step 1｜ここからスタート',copy:'まだわからないことがあっても大丈夫。まずはお金の出入りを知るところから、ゆっくり始めましょう。'},
-      {max:35,name:'Step 2｜少しずつ見えてきた',copy:'自分のお金について、気づき始めています。小さな行動に変えると、安心が少しずつ育っていきます。'},
-      {max:43,name:'Step 3｜いい習慣が育っている',copy:'お金を大切にする行動が、毎日の中に根づき始めています。整えたいことを一つ選んでみましょう。'},
-      {max:51,name:'Step 4｜ゆとりを生む仕組みづくり',copy:'お金や働き方の工夫が、暮らしの選択肢を増やし始めています。安心と幸せのバランスも大切にしましょう。'},
-      {max:60,name:'Step 5｜豊かさを分かち合う',copy:'お金・時間・幸せのバランスが整っています。あなたの経験が、まわりの人の笑顔にもつながっていきます。'}
-    ];
-    let current=0,answers=[];
-    const q=document.getElementById('question'),choices=document.getElementById('choices'),progress=document.getElementById('progress'),count=document.getElementById('countLabel'),axisLabel=document.getElementById('axisLabel');
-    function renderQuestion(){const axis=Math.floor(current/4);q.textContent=questions[current];axisLabel.textContent=axes[axis].name;count.textContent=`${current+1} / ${questions.length}`;progress.style.width=`${current/questions.length*100}%`;choices.innerHTML='';choiceLabels.forEach((label,i)=>{const b=document.createElement('button');b.className='choice';b.innerHTML=`<span>${i+1}</span>${label}`;b.onclick=()=>answer(i+1);choices.appendChild(b)})}
-    function answer(value){answers.push(value);current++;if(current<questions.length)renderQuestion();else renderResult()}
-    function renderResult(){document.getElementById('quizBody').style.display='none';progress.style.width='100%';count.textContent='できました！';axisLabel.textContent='あなたの診断結果';const scores=axes.map((_,i)=>answers.slice(i*4,i*4+4).reduce((a,b)=>a+b,0));const total=scores.reduce((a,b)=>a+b,0);const stage=stages.find(s=>total<=s.max);const low=Math.min(...scores);const lowIndex=scores.indexOf(low);const planningRoute=[1,2,3].includes(lowIndex);const route=planningRoute?{name:'マネープランニング',service:'planning',copy:'収入・支出・備え・働き方などを数字で見える形にし、理想とのギャップを整理することがおすすめです。'}:{name:'コーチング',service:'coaching',copy:'大切にしたい価値観やお金への気持ちを言葉にし、望む暮らしへの一歩を整理することがおすすめです。'};const result=document.getElementById('result');result.innerHTML=`<div class="center"><div class="score-ring" style="--pct:${Math.round(total/60*100)}%"><div><strong>${total}</strong><small>/ 60</small></div></div><div class="kicker">今のあなたは…</div><h3 class="stage">${stage.name}</h3><p class="result-copy">${stage.copy}</p></div><div class="bars">${scores.map((s,i)=>`<div class="bar-row"><span>${axes[i].short}</span><div class="bar-bg"><div class="bar-fill" style="width:${s/12*100}%"></div></div><strong>${s}</strong></div>`).join('')}</div><div class="next-action"><strong>まず大切にしたいこと：${axes[lowIndex].name}</strong><br>${axes[lowIndex].action}</div><div class="route-result"><strong>おすすめの次のステップ：${route.name}</strong>${route.copy}</div><div class="result-actions"><a class="cta" href="application/?service=${route.service}">${route.name}のサンプル申込へ →</a><button class="ghost" onclick="copyResult()">結果をコピー</button><button class="ghost" onclick="restart()">もう一度やってみる</button></div>`;result.classList.add('show');result.scrollIntoView({behavior:'smooth',block:'start'});window.quizSummary=`お金と暮らしの診断｜${total}/60点｜${stage.name}｜まず大切にしたいこと：${axes[lowIndex].name}｜おすすめ：${route.name}`}
-    function copyResult(){navigator.clipboard.writeText(window.quizSummary||'').then(()=>showToast('診断結果をコピーしました'))}
-    function restart(){current=0;answers=[];document.getElementById('result').classList.remove('show');document.getElementById('quizBody').style.display='block';renderQuestion();document.getElementById('quiz').scrollIntoView({behavior:'smooth'})}
-    function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
-    const moneyQuotes=[
-      'お金は、望む人生へ向かうための道具。目的地を決めると、使い方が変わる。',
-      '大きな安心は、今日の小さな習慣から育っていく。',
-      '豊かさとは、持っている額だけでなく、選べる時間があること。',
-      '使う・貯める・増やす。そのすべてに、自分らしい理由を持とう。',
-      '未来のお金は、未来の自分へのやさしい贈りもの。',
-      'お金を整えることは、人生の優先順位を整えること。',
-      '焦って増やすより、笑顔で続けられる仕組みを育てよう。',
-      '幸せを後回しにしないお金の使い方が、人生を豊かにする。',
-      '数字を見ることは、自分を責めることではなく、未来を選ぶこと。',
-      '時間は命。お金は、その命の使い方を支えるパートナー。',
-      '収入を増やす力と、幸せを感じる力を一緒に育てよう。',
-      '豊かさは、自分から大切な人へ、そして未来へと循環していく。'
-    ];
-    let quoteIndex=Math.floor(Math.random()*moneyQuotes.length);
-    try{
-      const previous=Number(localStorage.getItem('moneyQuoteIndex'));
-      if(Number.isInteger(previous)&&moneyQuotes.length>1&&quoteIndex===previous)quoteIndex=(quoteIndex+1+Math.floor(Math.random()*(moneyQuotes.length-1)))%moneyQuotes.length;
-      localStorage.setItem('moneyQuoteIndex',String(quoteIndex));
-    }catch(e){}
-    document.getElementById('moneyQuote').textContent=moneyQuotes[quoteIndex];
-    renderQuestion();
-  </script>
-</body>
-</html>
+<section class="closing"><div class="narrow"><p class="eyebrow">BACK TO YOUR LIFE</p><h2 class="title">あなたにとって、<br>豊かさとは何でしょうか。</h2><div class="closing-lines"><p>たくさんのお金かもしれない。</p><p>好きな仕事かもしれない。</p><p>大切な人との時間かもしれない。</p><p>挑戦できる自由かもしれない。</p><p>誰かの役に立つことかもしれない。</p></div><p class="lead">答えは、人によって違います。だからこそ、誰かの正解を追いかけるのではなく、まず自分の答えを知る。そして、その人生とお金をつなげていく。</p><p class="brand-message">大切なものを、<br>大切にできる人生へ。</p><a class="cta" href="#diagnosis">3分で豊かさの現在地を診断する →</a><p class="micro">無料｜約3分｜個人情報入力不要｜結果はその場で確認</p></div></section>
+</main><footer class="footer"><p>運営会社：株式会社AWARENESS</p><p>© HappyBalance MoneyProgram</p><p>本サイトはテスト公開中のサンプルです。</p></footer>
+<script>
+(()=>{
+const questions=[
+['value','あなたにとって「豊かさ」とは何か、自分の言葉で説明できますか？'],['value','人生で大切にしたいことの優先順位が見えていますか？'],['value','もしお金の心配がなかったら、どんな時間を過ごしたいか思い描けますか？'],['value','未来への備えと同じように、「今」を楽しむことも意識していますか？'],['value','自分が大切にしたい人・こと・時間を、具体的に挙げられますか？'],['value','何のために働き、資産形成をしているのか、言葉で説明できますか？'],['value','人生の最後に「やっておけばよかった」と思いたくないことが見えていますか？'],
+['alignment','現在のお金の使い方は、あなたが大切にしたい人生と一致していますか？'],['alignment','現在の時間の使い方は、自分が優先したいことを反映していますか？'],['alignment','十分な資産があったとしても、今と同じ働き方を選びますか？'],['alignment','お金を理由に後回しにしていることを、自分で把握していますか？'],['alignment','仕事・健康・人とのつながりなどのバランスに、今の自分は納得していますか？'],['alignment','今日の選択が、10年後に望む暮らしへつながっている感覚がありますか？'],['alignment','状況が変わったとき、自分の意思でお金や時間の使い方を見直せますか？'],
+['money','10年後に必要な資産額を、具体的な数字で答えられますか？'],['money','現在の純資産を、おおよそ把握していますか？'],['money','毎月の資産形成額は、未来の目標から逆算して決めていますか？'],['money','何歳まで、どのような働き方をしたいか、計画がありますか？'],['money','これから持ちたい収入源と、そのつくり方を考えていますか？'],['money','望む未来・必要な数字・今の行動を、一枚の計画として説明できますか？']];
+const names={value:'LAYER 1｜VALUE',alignment:'LAYER 2｜ALIGNMENT',money:'LAYER 3｜MONEY'},labels=['まだ言葉にできていない','少し見えている','はっきりしている・実践している'];
+const profiles={
+value:{title:'走る力はある。自分の目的地を言葉にするタイミング',lead:'行動する力や現実を整える力があるからこそ、次は「何のために」を明確にすると、選択に一本の軸が生まれそうです。',strength:'前へ進む実行力と、現実に向き合う姿勢',values:'まだ言葉になる前の、大切な感覚が内側にあります',alignment:'日々を整える前に、判断の軸を見つける余地があります',money:'数字や知識を、目的に沿って選び直せる段階です',bottleneck:'行き先より先に、方法を増やしているかもしれません',potential:'自分の豊かさを言葉にすると、迷っていた選択が整理されます',questions:['もし評価やお金を気にしなくてよいなら、何を選びますか？','今の人生で、守りたいものは何ですか？','10年後の自分に、どんな時間を残したいですか？'],step:'「私にとって豊かさとは」を三つ書き出してみる'},
+alignment:{title:'大切なものは見えている。毎日の選択をそろえるタイミング',lead:'望む方向は見えています。次は、今のお金・時間・働き方がその方向へ向いているかを、やさしく点検する段階です。',strength:'自分なりの価値観と、未来を思い描く力',values:'何を大切にしたいかが、少しずつ言葉になっています',alignment:'思いと日々の選択の間に、調整できる余白があります',money:'数字を日常の意思決定へ結びつけると力になります',bottleneck:'大切なことが、予定や支出の後回しになっているかもしれません',potential:'小さな選択をそろえるだけで、望む人生への実感が増えます',questions:['今週の予定は、大切にしたいことを反映していますか？','減らすことで生まれる時間やお金はありますか？','今月ひとつだけ、望む未来に近づける選択は？'],step:'時間と支出を一週間だけ記録し、大切にしたいこととの一致を見る'},
+money:{title:'未来は見えている。お金との接続を整えるタイミング',lead:'望む人生や大切にしたいことは見えています。その未来を数字に変えることで、「いつか」が具体的な計画へ変わります。',strength:'未来を描く力と、自分の価値観を大切にする姿勢',values:'人生の方向性が、あなたの選択の土台になっています',alignment:'日々の行動も、望む方向へ整い始めています',money:'必要額・現在地・期間を一枚につなぐ余地があります',bottleneck:'未来のイメージが、まだ数字と期限に翻訳されていません',potential:'数字が見えると、安心と選択肢を同時に育てられます',questions:['望む暮らしには、年間いくら必要ですか？','現在地との差を、何年で埋めたいですか？','今の資産形成額は、その計画とつながっていますか？'],step:'10年後の暮らし・必要額・現在の純資産を一枚に書く'},
+balanced:{title:'現在地が見え始めた。人生とお金を一枚につなぐタイミング',lead:'価値観・日々の選択・お金の計画が、それぞれ育っています。次は三つを一枚につなぎ、判断しやすい形にする段階です。',strength:'一つの正解に偏らず、全体を見渡せるバランス感覚',values:'大切にしたいものを、現実とともに考えられています',alignment:'小さな調整を重ねることで、一致度を高められます',money:'計画の解像度を上げると、次の行動が明確になります',bottleneck:'考えていることが、複数の場所に分散しているかもしれません',potential:'人生と数字を一枚にまとめると、選択の迷いが減ります',questions:['三つの層で、今いちばん整えたいのはどこですか？','一年後に変わっていたいことは何ですか？','その変化を確かめる数字や行動は何ですか？'],step:'人生・お金・次の行動を一枚のメモにまとめる'},
+ready:{title:'選ぶ力が育っている。自分の計画を実践へ',lead:'人生の方向、毎日の選択、お金の計画がつながり始めています。完成を待つより、試しながら自分の計画を育てていける段階です。',strength:'考える力と行動する力を、バランスよく使えること',values:'自分なりの豊かさが、判断の軸として機能しています',alignment:'日々の選択と望む未来に、つながりがあります',money:'数字を見直しながら、実践へ移せる状態です',bottleneck:'より良い答えを求めて、着手を待ってしまうことかもしれません',potential:'小さく実行し、振り返ることで計画の精度が上がります',questions:['今月、最初に実行する一歩は何ですか？','計画を見直す日は決まっていますか？','一人で進む部分と、支援を使う部分をどう分けますか？'],step:'今月の一歩と、三か月後の見直し日を決める'}};
+let current=0,answers=[];const q=document.getElementById('question'),choices=document.getElementById('choices'),count=document.getElementById('count'),layer=document.getElementById('layerLabel'),bar=document.getElementById('progressBar');
+document.getElementById('startButton').onclick=()=>{current=0;answers=[];render()};
+function render(){q.textContent=questions[current][1];layer.textContent=names[questions[current][0]];count.textContent=`${current+1} / 20`;bar.style.width=`${current/20*100}%`;choices.innerHTML='';labels.forEach((x,i)=>{const b=document.createElement('button');b.type='button';b.className='choice';b.innerHTML=`<span>${i+1}</span>${x}`;b.onclick=()=>answer(i+1);choices.appendChild(b)})}
+function answer(v){answers.push(v);current++;current<20?render():showResult()}
+function showResult(){const sums={value:0,alignment:0,money:0},max={value:21,alignment:21,money:18};questions.forEach((x,i)=>sums[x[0]]+=answers[i]);const pct={};Object.keys(sums).forEach(k=>pct[k]=Math.round(sums[k]/max[k]*100));const vals=Object.values(pct);let key;if(Math.min(...vals)>=75)key='ready';else{const low=Object.keys(pct).sort((a,b)=>pct[a]-pct[b])[0];key=Math.max(...vals)-Math.min(...vals)<12?'balanced':low}const p=profiles[key];document.getElementById('quizBody').style.display='none';bar.style.width='100%';count.textContent='COMPLETE';layer.textContent='あなたの現在地';const r=document.getElementById('result');r.innerHTML=`<p class="eyebrow">YOUR CURRENT POSITION</p><h3 class="result-title">${p.title}</h3><p class="result-lead">${p.lead}</p><div class="viz"><div class="radar"><canvas id="radar" width="360" height="320" aria-label="3層のレーダーチャート"></canvas></div><div class="bars">${[['VALUE','value'],['ALIGNMENT','alignment'],['MONEY','money']].map(x=>`<div class="bar-row"><span>${x[0]}</span><div class="bar-bg"><div class="bar-fill" style="width:${pct[x[1]]}%"></div></div><strong>${pct[x[1]]}%</strong></div>`).join('')}</div></div><div class="insights"><div class="insight"><b>あなたの強み</b><p>${p.strength}</p></div><div class="insight"><b>大切にしたいこと</b><p>${p.values}</p></div><div class="insight"><b>人生との一致度</b><p>${p.alignment}</p></div><div class="insight"><b>経済的な現在地</b><p>${p.money}</p></div><div class="insight"><b>今のボトルネック</b><p>${p.bottleneck}</p></div><div class="insight"><b>まだ活かしきれていない可能性</b><p>${p.potential}</p></div></div><div class="nextq"><h4>次に考えたい3つの問い</h4><ol>${p.questions.map(x=>`<li>${x}</li>`).join('')}</ol><p><strong>おすすめの最初の一歩：</strong>${p.step}</p></div><div class="result-actions"><button class="ghost" id="copy">結果をコピー</button><a class="ghost" href="#paths">3つの進み方を見る</a><button class="ghost" id="restart">もう一度診断する</button></div><p class="privacy">数値は優劣ではなく、3つの層のつながりを見るための目安です。回答・結果は保存されません。</p>`;r.classList.add('show');radar(pct);document.getElementById('copy').onclick=()=>copy(p,pct);document.getElementById('restart').onclick=restart;r.scrollIntoView({behavior:'smooth',block:'start'})}
+function radar(p){const c=document.getElementById('radar'),x=c.getContext('2d'),cx=180,cy=162,R=110,A=[-Math.PI/2,Math.PI/6,Math.PI*5/6],V=[p.value,p.alignment,p.money];for(let n=1;n<=4;n++){x.beginPath();A.forEach((a,i)=>{let r=R*n/4,xx=cx+Math.cos(a)*r,yy=cy+Math.sin(a)*r;i?x.lineTo(xx,yy):x.moveTo(xx,yy)});x.closePath();x.strokeStyle='#dce8e3';x.stroke()}A.forEach(a=>{x.beginPath();x.moveTo(cx,cy);x.lineTo(cx+Math.cos(a)*R,cy+Math.sin(a)*R);x.strokeStyle='#e3ebe8';x.stroke()});x.beginPath();A.forEach((a,i)=>{let r=R*V[i]/100,xx=cx+Math.cos(a)*r,yy=cy+Math.sin(a)*r;i?x.lineTo(xx,yy):x.moveTo(xx,yy)});x.closePath();x.fillStyle='#529e9447';x.fill();x.strokeStyle='#397f78';x.lineWidth=3;x.stroke();x.fillStyle='#18343a';x.font='600 14px Noto Sans JP';x.textAlign='center';['VALUE','ALIGNMENT','MONEY'].forEach((t,i)=>x.fillText(t,cx+Math.cos(A[i])*(R+32),cy+Math.sin(A[i])*(R+32)+5))}
+function copy(p,pct){navigator.clipboard.writeText(`豊かさの現在地診断\n${p.title}\nVALUE ${pct.value}% / ALIGNMENT ${pct.alignment}% / MONEY ${pct.money}%\n次の一歩：${p.step}`).then(()=>{document.getElementById('copy').textContent='コピーしました'})}
+function restart(){current=0;answers=[];const r=document.getElementById('result');r.classList.remove('show');r.innerHTML='';document.getElementById('quizBody').style.display='block';render();document.getElementById('diagnosis').scrollIntoView({behavior:'smooth'})}
+const quotes=['お金の正解は、人生の数だけある。','目的地が変われば、必要なお金の形も変わる。','未来への備えと、今日を生きること。その両方を大切に。','増やす前に、何のために使いたいかを考えてみる。','自由とは、選べること。そして、選ばないことも選べること。','時間もまた、人生から預かっている大切な資源。','数字は答えではなく、自分の望みを現実につなぐ道具。','誰かの正解より、自分が納得できる選択を。','豊かさは、持っている量だけでなく、選べる幅にも表れる。'];let last=Number(sessionStorage.getItem('quoteIndex')),i=Math.floor(Math.random()*quotes.length);if(i===last)i=(i+1)%quotes.length;sessionStorage.setItem('quoteIndex',i);document.getElementById('dailyQuote').textContent=quotes[i];
+})();
+</script>
+</body></html>
